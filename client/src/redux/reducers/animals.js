@@ -2,14 +2,6 @@ import { GET_ANIMALS, HOME_UNMOUNTED, SHOW_FORM } from '../actions';
 
 const initialState = {
     animals: [],
-    newAnimal: {
-        name: '',
-        azil: '',
-        age: '',
-        gender: '',
-        image: '',
-        description: ''
-    },
     home: false,
     form: false
 }

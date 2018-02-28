@@ -4,6 +4,8 @@
     grid-area: header;
     color: $text;
 
+    @media screen and (max-width: $small-screen) { width: 100vw; }
+
     &__logo {
         @include display-flex (row, center, initial);
         height: 67%;

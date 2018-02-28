@@ -44,3 +44,13 @@
         }
     }
 }
+
+@media screen and (max-width: 666px) { 
+    .error {
+        @include display-flex (column, center, center);
+
+        &__text {
+            width: 100%;
+        }
+    }
+}

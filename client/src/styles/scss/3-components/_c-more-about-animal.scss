@@ -55,7 +55,7 @@
                     column-count: 2;
                     column-gap: 20px;
                     width: 100%;
-                @media screen and (max-width: 993px) and (min-width: 810px) { 
+                @media screen and (max-width: 993px) and (min-width: 900px) { 
                     @include display-flex (column, initial, initial);
                     column-count: 1;
                     font-size: 13px;
@@ -64,6 +64,7 @@
 
                     li {
                         margin-bottom: 1em;
+                        display: inline-flex;
 
                         span {
                             font-size: 1.5em;
@@ -95,7 +96,7 @@
     }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 900px) {
     .animal-more__container {
         flex-direction: column;
         @include size (100%, 90%);
@@ -117,6 +118,11 @@
 
                 ul {
                     column-count: 1;
+                    align-items: center;
+
+                    li {
+                        display: block;
+                    }
                 }
             }
 

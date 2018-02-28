@@ -18,16 +18,6 @@ class SelectFilter extends Component {
         this.setState({ selectedAnimal: this.props.filters.type });
     }
 
-    _getInitialState () {
-
-        const animalTypes = [
-                { name: 'Select type', breed: ['Select breed'] },
-                { name: 'dog', breed: ['Labrador', 'Maltezer', 'Mops', 'Maltezer'] },
-                { name: 'cat', breed: ['Perzijska', 'Divlja']}
-            ];
-        return animalTypes;    
-    }
-
     handleChange(event) {
         var name = event.target.name;
         this.props.actions.filterAnimals(event.target.value, name);
@@ -36,27 +26,19 @@ class SelectFilter extends Component {
     }
 
     render() {
-        const animalTypes = this._getInitialState();
-        let selectedAnimalType = null;
-
-        animalTypes.forEach(function(type) {
-            if(type.name === this.state.selectedAnimal) {
-                selectedAnimalType = type;
-            }
-        }, this);
+        const breed = this.props.type_breed.filter(item => item.type === this.props.filters.type);
+        console.log(breed);
 
         return(
             <div className="filters__form__inputs__bottom-inputs">
                 <select className="filters__form__inputs__bottom-inputs__type" name="type" value={this.props.filters.type} onChange={this.handleChange}>
                     {
-                        animalTypes.map((type, i) => {
-                            return <option key={i}>{type.name}</option>
-                        })
+                        this.props.type_breed.map((animalType, i) => <option key={i}>{animalType.type}</option>)
                     }
                 </select>
                 <select className="filters__form__inputs__bottom-inputs__breed" value={this.props.filters.breed} name="breed" onChange={this.handleChange}>
                     {
-                        selectedAnimalType.breed.map((animalBreed, i) => {
+                        breed[0].breed.map((animalBreed, i) => {
                             return <option key={i} >{animalBreed}</option>
                         })
                     }
@@ -83,7 +65,8 @@ class SelectFilter extends Component {
 function mapStateToProps(state) {
     return {
         animals: state.filter.filteredAnimals,
-        filters: state.filter.filters
+        filters: state.filter.filters,
+        type_breed: state.filter.type_breed
     };
 }
 

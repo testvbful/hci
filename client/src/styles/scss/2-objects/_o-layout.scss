@@ -42,6 +42,8 @@
     background-image: url('../../images/wallpaper3-1.png');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: $small-screen) { width: 100vw; }
 }
 
 main {

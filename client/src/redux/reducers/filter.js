@@ -10,11 +10,17 @@ const initialState = {
         breed: 'Select breed',
         gender: 'Gender'
     },
-    clickedAnimal: {}
+    clickedAnimal: {},
+    type_breed: [
+        { type: 'Select type', breed: ['Select breed'] },
+        { type: 'Dog', breed: ['Labrador', 'Maltezer', 'Mops', 'Maltezer'] },
+        { type: 'Cat', breed: ['Perzijska', 'Divlja']}
+    ]
 }
 
 function resetFilter(state, action) {
     return {
+        ...state,
         filteredAnimals: [],
         filters: {
             age: 'Animal age',
