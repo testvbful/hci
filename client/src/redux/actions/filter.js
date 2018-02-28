@@ -14,10 +14,10 @@ export const filterAnimals = (payload, id) => ({
 });
 
 export function getFilteredAnimals(filters, animals){
-    console.log("filter",animals);
-    console.log("filter1",filters.age);
-    console.log("filter2",filters.city);
-    console.log("filter3",filters.type);
+//     console.log("filter",animals);
+//     console.log("filter1",filters.age);
+//     console.log("filter2",filters.city);
+//     console.log("filter3",filters.type);
     var filteredAnimals = animals.filter(animal => animal.ageRange === filters.age && animal.location.city === filters.city && animal.type === filters.type)
     return {
         type: GET_FILTERED_ANIMALS,
