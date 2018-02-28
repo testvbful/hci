@@ -1,0 +1,54 @@
+.h-info__title {
+    @include display-flex (row, center, center);
+    color: $gray;
+    margin-top: 1em;
+    font-weight: 300;
+    font-size: 58px;
+}
+
+.h-info__items {
+    display: flex;
+    padding: 30px 5em;
+    margin: 1.5em 0 2em 0; 
+    background-color: $white;
+
+    &__item {
+        @include display-flex (column, center, center);
+        margin-left: 0.7em;
+
+        i {
+            color: $green;
+            margin-bottom: 1em;
+        }
+
+        &__side-text {
+            @include display-flex (column, center, center);
+
+            h3 {
+                font-size: 1.5em;
+                margin-bottom: 1em;
+                color: $gray;
+            }
+
+            p {
+                text-align: justify;
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $small-screen) {
+    .h-info__title {
+        font-size: 50px;
+        padding: 0 20px;
+    }
+
+    .h-info__items {
+        flex-direction: column;
+
+        &__item {
+            margin-bottom: 1em;
+        }
+    }
+}

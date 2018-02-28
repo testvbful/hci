@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+input:focus{
+    outline: none !important;
+}
+
+label {
+    font-weight: 400;
+    margin: 0;
+}
+
+input, select {
+    padding: 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    color: #777777;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: $base-font + 1px;
+    cursor: pointer;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+button, button:focus {
+    outline: none !important;
+    cursor: pointer;
+}
+

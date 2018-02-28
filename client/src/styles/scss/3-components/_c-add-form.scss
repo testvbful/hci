@@ -1,0 +1,126 @@
+%input {
+    padding: 0;
+    border: 0;
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    color: $gray;
+}
+
+.add-animal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 1%;
+        background-color: $white;
+        width: 650px;
+        padding: 20px 40px;
+        border-radius: 4px;
+
+        &__heading {
+            color: $gray;
+            font-size: 1.4em;
+            font-weight: 800;
+            margin: 10px 0;
+            text-transform: uppercase;
+            align-self: flex-start;
+        }
+
+        &__description {
+            min-height: 100px;
+            margin-bottom: 1.5em;
+        }
+
+        textarea {
+            min-height: 80px;
+        }
+
+        &__age-gender-type-breed {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            justify-content: space-around;
+
+            &__age {
+                width: 20%;
+            }
+
+            &__gender, &__type {
+                width: 23%;
+            }
+
+            &__breed {
+                width: 33%;
+            } 
+        }
+
+        hr {
+            border: 0.5px solid $bila;
+            width: 100%;
+            margin: 1em 0;
+        }
+
+        input, select, textarea {
+            @extend %input;
+        }
+
+        &__buttons {
+            width: 50%;
+            position: absolute;
+            top: 93%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+
+            &__submit {
+                background-color: $green;
+                color: $white;
+                border: 1px solid $green;
+                border-radius: 30px;
+                margin-right: 1em;
+                width: 100%;
+                padding: 10px;
+                font-size: 1.4em;
+                text-transform: uppercase;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: $green;
+                    border: 1px solid $green;
+                }
+            }
+
+            &__cancel {
+                border: 0;
+                background-color: transparent;
+                color: $green;
+                margin-top: 1em;
+                font-weight: 600;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            font-size: 1.3em;
+            top: 2%;
+            left: 94%;
+            color: $gray;
+            cursor: pointer;
+
+            &:hover {
+                color: $light-pink;
+            }
+        }
+    }
+}

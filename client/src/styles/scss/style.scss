@@ -1,0 +1,20 @@
+@import '0-settings/s-variables.scss';
+@import '0-settings/s-mixins.scss';
+
+@import '1-globals/g-base.scss';
+
+@import '2-objects/o-layout.scss';
+
+@import '3-components/c-header.scss';
+@import '3-components/c-home-form.scss';
+@import '3-components/c-home-info.scss';
+@import '3-components/c-animals.scss';
+@import '3-components/c-animal.scss';
+@import '3-components/c-filters.scss';
+@import '3-components/c-autosuggest.scss';
+@import '3-components/c-more-about-animal.scss';
+@import '3-components/c-more-about-azil.scss';
+@import '3-components/c-error.scss';
+@import '3-components/c-not-found.scss';
+@import '3-components/c-footer.scss';
+@import '3-components/c-add-form.scss';

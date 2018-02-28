@@ -1,0 +1,130 @@
+.animal-more {
+    @include display-flex (row, center, center);
+    grid-area: main;
+    min-height: 90vh;
+
+    &__container {
+        @include size (70%, 500px);
+        display: flex;
+        box-shadow: $box-shadow;
+
+        &__left {
+            @include size (40%, 100%);
+            background-size: 100% 100%;
+            position: relative;
+
+            &__overlay {
+                @include size (100%, 100%);
+                position: absolute;
+                background: rgba(0,0,0,0.2);
+            }
+
+            &__slider {
+                position: absolute;
+                top: 90%;
+                display: flex;
+                left: 42%;
+                z-index: 10;
+            }
+        }
+
+        &__right {
+            @include display-flex (column, center, space-around);
+            width: 60%;
+            padding: 30px 50px;
+
+            &__name-age-gender {
+                @include display-flex (row, center, space-between);
+                width: 100%;
+                margin-bottom: 10px;
+
+                h2 {
+                    margin: 0;
+                }
+            }
+
+            &__description {
+                text-align: justify;
+            }
+
+            &__details {
+                @include display-flex (row, center, center);
+
+                ul {
+                    list-style: none;
+                    column-count: 2;
+                    column-gap: 20px;
+                    width: 100%;
+                @media screen and (max-width: 993px) and (min-width: 810px) { 
+                    @include display-flex (column, initial, initial);
+                    column-count: 1;
+                    font-size: 13px;
+                    column-gap: 1px; 
+                }
+
+                    li {
+                        margin-bottom: 1em;
+
+                        span {
+                            font-size: 1.5em;
+                            color: $gray;
+                        }
+
+                        label {
+                            font-size: 20px;
+                            margin-left: 1em;
+                        }
+                    }
+                }
+            }
+
+            &__link {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    background-color: $green;
+                    padding: 14px 0;
+                    color: $text;
+                    border: none;
+                    border-radius: 4px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .animal-more__container {
+        flex-direction: column;
+        @include size (100%, 90%);
+
+        &__left {
+            @include size (100%, 300px);
+        }
+
+        &__right {
+            padding: 30px 50px;
+            width: 100%;
+
+            &__description {
+                margin-top: 1em;
+            }
+
+            &__details {
+                margin: 1.5em 0;
+
+                ul {
+                    column-count: 1;
+                }
+            }
+
+            &__link {
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

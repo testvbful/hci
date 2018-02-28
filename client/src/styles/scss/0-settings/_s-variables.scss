@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+$primary-font: 'Quicksand', sans-serif;
+
+//Font sizes
+$base-font: 16px;
+
+//Colors
+$white: #fff;
+$green: #4CAF50;
+$pink: #a62ca2;
+$light-pink: #f44336;
+$gray: #484848;
+$light-gray: #ccc;
+$lighter-gray: #DBDBDB;
+$bila: #ececec;
+$input-text: #777777;
+$footer-background: #171717;
+$box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+
+$text: $white;
+$input-border: $light-gray;
+$filters: $lighter-gray;
+
+// Media querys
+$mobile-screen: 440px;
+$small-screen: 770px;
+$tablet-screen: 1070px;
+$wide-screen: 1600px;

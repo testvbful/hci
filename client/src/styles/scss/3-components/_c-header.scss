@@ -1,0 +1,55 @@
+.header {
+    @include display-flex (row, center, space-between);
+    width: 100%;
+    grid-area: header;
+    color: $text;
+
+    &__logo {
+        @include display-flex (row, center, initial);
+        height: 67%;
+
+        &__logo-image {
+            @include size (18%, 80%);
+            margin-left: 1em;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        &__name {
+            color: $text;
+            
+            h2 {
+                font-size: 25px;
+                margin: 0;
+            }
+
+        @media screen and (max-width: $small-screen) { margin-left: 25px; }
+        }
+    }
+
+    &__nav {
+        @include display-flex (row, center, initial);
+        list-style: none;
+        height: 100%;
+        color: $text;
+
+        &__link {
+            @include display-flex (row, center, initial);
+            height: 100%;
+            color: $white;
+            font-size: 20px;
+            padding: 0px 25px;
+            border: 2px solid transparent;
+
+            &.active {
+                border-bottom: 2px solid $green;
+            }
+
+            &:hover {
+                border-bottom: 2px solid $green;
+            }
+        }
+    }
+}

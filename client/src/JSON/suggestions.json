@@ -1,0 +1,36 @@
+{
+    "suggestions": {
+        "cities": [
+            {
+                "name": "Split, Croatia"
+            },
+            {
+                "name": "Solin, Croatia"
+            },
+            {
+                "name": "Zadar, Croatia"
+            },
+            {
+                "name": "Zagreb, Croatia"
+            }
+        ],
+        "azili": [
+            {
+                "name": "Splitske šape"
+            },
+            {
+                "name": "Solinske šape"
+            },
+            {
+                "name": "Zadarske šape"
+            },
+            {
+                "name": "Zagrebačke šape"
+            }
+        ]
+
+        
+
+        
+    }
+}

@@ -1,0 +1,65 @@
+.a-section {
+    grid-area: main;
+    @include display-flex (column, center, center);
+    min-height: 90vh;
+
+    &__filter-more {
+        @include display-flex (row, initial, initial);
+        margin: 0 0 1em 10.8%;
+        border-radius: 4px;
+        align-self: end;
+        text-align: center;
+        font-weight: 600;
+        padding: 10px 35px;
+        font-size: 1.3em;
+
+        &__open {
+            background-color: $light-pink;
+            border:1px solid transparent;
+            color: $white;
+        }
+
+        &__closed {
+            background-color: $white;
+            border: 1px solid #DBDBDB;
+            color: $light-pink;
+            transition: opacity 0.5s;
+            opacity: 1;
+        }
+    }
+
+    &__animals {
+        @include size (80%, 100%);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__more-animals {
+        width: 30%;
+        border: 3px solid $green;
+        background-color: transparent;
+        color: $green;
+        border-radius: 4px;
+        padding: 14px 0;
+        margin: 2em 0;
+        font-size: 1.4em;
+        text-transform: uppercase;
+
+    @media screen and (max-width: $small-screen) { width: 80%; }
+    }
+
+    &__add {
+        position: fixed;
+        @include size (50px, 50px);
+        left: 93%;
+        bottom: 8%;
+        cursor: pointer;
+
+        img {
+            @include size (100%, 100%);
+        }
+    }
+}
+
+
+

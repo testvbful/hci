@@ -1,0 +1,71 @@
+.animal {
+    @include size (32%, 320px);
+    margin: 0.7em 0 4em 0.7em;
+    box-shadow: $box-shadow;
+    position: relative;
+
+    &__image {
+        @include size (100%, 70%);
+
+        img {
+            @include size (100%, 100%);
+        }
+    }
+
+    &__info {
+        @include display-flex (row, center, space-around);
+        @include size (100%, 30%);
+        padding: 10px;
+
+        &__text {
+            @include display-flex (column, initial, initial);
+
+            &__name {
+                color: $gray;
+                font-size: 1.42em;
+                margin: 5px 0;
+                font-weight: 600;
+            }
+
+            label {
+                font-size: 0.9em;
+            }
+        }
+
+        &__link {
+            @include size (50%, 73%);
+            margin-left: 1.5em;
+
+            input[type=button] {
+                @include size (100%, 100%);
+                background-color: $green;
+                color: $white;
+                border: none;
+                border-radius: 4px;
+                font-size: 1em;
+                margin: 0;
+            }
+        }
+    }
+
+    &__delete {
+        position: absolute;
+        top: -3.3%;
+        left: 97%;
+        font-size: 1.4em;
+        color: $light-pink;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: $tablet-screen) and (min-width: $small-screen) {
+    .animal {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: $small-screen) {
+    .animal {
+        width: 100%;
+    }
+}

@@ -1,0 +1,87 @@
+.h-form {
+    @include display-flex (column, center, initial);
+    height: 90vh;
+
+    &__form {
+        @include display-flex (column, center, initial);
+        margin-top: 5em;
+        width: 100%;
+
+        &__inputs {
+            @include display-flex (row, initial, center);
+            width: 100%;
+            padding: 0 0.5em;
+
+            .react-autosuggest__container {
+                width: 30%;
+                margin: 8px 0;
+            }
+
+            .react-autosuggest__input {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                font-size: 17px;
+            }
+
+            &__age {
+                border-bottom-right-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            &__submit {
+                background-color: $green;
+                color: $white;
+                padding: 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                font-size: 1.3em;
+                margin-left: 1em;
+            }
+        }
+    }
+
+    &__title {
+        @include display-flex (row, center, center);
+        font-size: 68px;
+        font-weight: 600;
+        color: $white;
+        margin-top: 0.5em;
+    }
+}
+
+@media screen and (max-width: $small-screen) {
+
+    .h-form__form {
+        width: 80%;
+
+        &__inputs {
+            flex-direction: column;
+
+            .react-autosuggest__container {
+                width: 100%;
+
+                .react-autosuggest__input {
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                }
+            }
+
+            &__age, &__type {
+                width: 100%;
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            &__submit {
+                width: 100%;
+                margin: 0;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .h-form__title {
+        font-size: 58px;
+    }
+}

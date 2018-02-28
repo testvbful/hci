@@ -1,0 +1,39 @@
+{
+  "name": "nwt",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "foreman": "^2.0.0",
+    "marked": "^0.3.12",
+    "mongoose": "^5.0.2",
+    "morgan": "^1.9.0",
+    "node-sass-chokidar": "0.0.3",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-autosuggest": "^9.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-google-maps": "^9.4.5",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/styles/scss/ -o src/styles/css/ --output-style compressed",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/styles/scss/ -o src/styles/css/ --watch --recursive --output-style compressed",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000/"
+}
