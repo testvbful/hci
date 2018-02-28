@@ -66,7 +66,7 @@ app.post('/newAnimal', function(req, res, next) {
     }
 
     locationData.findOne({name: req.body.data.location.name}, function(err, location){
-      console.log("lokacija je", location);
+      //console.log("lokacija je", location);
       item['location']=location._id;
       let data = new animalData(item);
       data.save(function(err){
